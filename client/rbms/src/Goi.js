@@ -10,19 +10,19 @@ function Goi() {
   //const [UserInputShow, setUserInputShow] = useState(false);
   return (
     <>
-      <Button onClick={() => window.location.reload(false)}>Back to Main page</Button>
+      <Button  className="buttonRak" onClick={() => window.location.reload(false)}>Main page</Button>
       <div className="app">
-        <div className="login-form">
+        <div className="box_home">
 
           <ButtonGroup vertical>
-            <Button variant="warning" size="lg" onClick={() => setTobetestedShow(true)}>List of Tobetested Water Bodies</Button>
+            <Button className="buttonRak" size="lg" onClick={() => setTobetestedShow(true)}>To be tested</Button>
             <Tobetested
               show={TobetestedShow}
               onHide={() => setTobetestedShow(false)}
             />
             <br></br>
          
-            <Button variant="warning" size="lg" onClick={() => setAimlShow(true)}> Aiml </Button>
+            <Button className="buttonRak" size="lg" onClick={() => setAimlShow(true)}> AI/ML Model </Button>
             <Aiml
               show={AimlShow}
               onHide={() => setAimlShow(false)}

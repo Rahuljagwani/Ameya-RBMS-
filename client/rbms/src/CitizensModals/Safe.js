@@ -28,14 +28,8 @@ function Safe(props) {
                     </Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    {/* <div>
-                        {wbName.map((item)=>
-                        <h5>{item.rivername}</h5>
-                        )}
-                    </div> */}
                     <div class="safe_body">
                         <div class="safe_wrapper">
-                            {/* <h1 class="safe_h1">How to clean your fish tank</h1> */}
                             <ol class="safe_ol" role="list">
                                 {wbName.map((item) =>
                                     <li class="safe_li">{item.rivername}</li>

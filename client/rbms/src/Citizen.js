@@ -11,29 +11,31 @@ function Citizen() {
   const [UserInputShow, setUserInputShow] = useState(false);
   return (
     <>
-      <Button className="buttonRak" onClick={() => window.location.reload(false)}>Back to Main page</Button>
+      <button className="buttonRak" onClick={() => window.location.reload(false)}>Main page</button>
       <div className="app">
-        <div className="login-form">
+        {/* <div className="home_box"> */}
+          <div className="box_home">
 
-          <ButtonGroup vertical>
-            <Button variant="warning" size="lg" onClick={() => setSafeShow(true)}>List of Safe Water Bodies</Button>
-            <Safe
-              show={SafeShow}
-              onHide={() => setSafeShow(false)}
-            />
-            <br></br>
-            <Button variant="warning" size="lg" onClick={() => setUnsafeShow(true)}>List of Unsafe Water Bodies</Button>
-            <Unsafe
-              show={UnsafeShow}
-              onHide={() => setUnsafeShow(false)}
-            />
-            <br></br>
-            <Button variant="warning" size="lg" onClick={() => setUserInputShow(true)}>Check if water body is Safe or Not</Button>
-            <UserInput
-              show={UserInputShow}
-              onHide={() => setUserInputShow(false)}
-            />
-          </ButtonGroup>
+            <ButtonGroup vertical>
+              <Button className="buttonRak"  size="lg" onClick={() => setSafeShow(true)}>Safe Water Bodies</Button>
+              <Safe
+                show={SafeShow}
+                onHide={() => setSafeShow(false)}
+              />
+              <br></br>
+              <Button className="buttonRak"  size="lg" onClick={() => setUnsafeShow(true)}>Unsafe Water Bodies</Button>
+              <Unsafe
+                show={UnsafeShow}
+                onHide={() => setUnsafeShow(false)}
+              />
+              <br></br>
+              <Button className="buttonRak"  size="lg" onClick={() => setUserInputShow(true)}>Send for testing</Button>
+              <UserInput
+                show={UserInputShow}
+                onHide={() => setUserInputShow(false)}
+              />
+            </ButtonGroup>
+          {/* </div> */}
         </div>
       </div>
 

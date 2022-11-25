@@ -1,6 +1,6 @@
 import React from "react";
-// import Goi from "./images/Goi.jpg"
-// import Citizen from "./images/Citizen.jpg"
+import Goi from "./images/gov.jpeg"
+import Citizen from "./images/citize.jpeg"
 
 class Landingpage extends React.Component {
     constructor(props) {
@@ -20,14 +20,14 @@ class Landingpage extends React.Component {
                 <button className="LpButton" id="Goi-button" onClick={()=>{this.props.funShowGoi(this.state.showGoi);
                 this.props.funShowCitizen(false);
                 }}>
-                    <h2>Goi</h2>
-                    {/* <img src="" className="Button-image"></img> */}
+                    {/* <h2>Goi</h2> */}
+                    <img src={Goi} className="Button-image"></img>
                 </button>
                 <button className="LpButton" id="Citizen-button" onClick={()=>{this.props.funShowCitizen(this.state.showCitizen);
                 this.props.funShowGoi(false);
                 }}>
-                <h2>Citizen</h2>
-                {/* <img src={Citizen} className="Button-image"></img> */}
+                {/* <h2>Citizen</h2> */}
+                <img src={Citizen} className="Button-image"></img>
             
                 </button>
             

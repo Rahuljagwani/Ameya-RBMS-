@@ -17,7 +17,7 @@ function Unsafe(props) {
 
         <>
 
-            <Modal
+            <Modal className="my-modal"
                 {...props}
                 size="lg"
                 aria-labelledby="contained-modal-title-vcenter"
@@ -25,16 +25,27 @@ function Unsafe(props) {
             >
                 <Modal.Header closeButton>
                     <Modal.Title id="contained-modal-title-vcenter">
-                        INSERT INTO TABLES
+                    <h1> INSERT INTO TABLES</h1>
                     </Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
+                    <div class="safe_body">
+                        <div class="safe_wrapper">
+                            <ol class="safe_ol" role="list">
+                                {wbName.map((item) =>
+                                    <li class="safe_li">{item.rivername}</li>
+                                )}
 
-                <div>
+
+                            </ol>
+                        </div>
+                    </div>
+
+                    {/* <div>
                         {wbName.map((item)=>
                         <h5>{item.rivername}</h5>
                         )}
-                    </div>
+                    </div> */}
 
 
                 </Modal.Body>

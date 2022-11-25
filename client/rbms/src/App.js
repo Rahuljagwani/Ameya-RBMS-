@@ -16,7 +16,7 @@ function App() {
   else
   return (
 <>
-<div className='heading'>River Body Management System </div>
+<div className='watertitle'>River Body Management System </div>
 <Landingpage  
 funShowCitizen={setshowCitizen}
 funShowGoi={setshowGoi}

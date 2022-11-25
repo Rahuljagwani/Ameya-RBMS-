@@ -6,56 +6,20 @@ function UserInput(props) {
 
     const [wbName, setwbName] = useState("");
     const [wbList, setwbList] = useState([]);
-    useEffect(() => {
-        Axios.get("http://localhost:3001/api/listFull").then((response) => {
-            setwbList(response.data);
-        })
-
-    }, [wbList]);
+    const [wbCat, setwbCat] = useState("");
+   
     const submitNumber = () => {
-
-        var f=1;
-        var cat=-1;
-        for(var i=0;i<wbList.length;i++)
-        {
-            if (wbName === wbList[i].rivername)
-            {
-                f=0;
-                cat=wbList[i].Category;
-                console.log(f);
-            }
-            
-
-        }
-
-
-        if (f===1) {
-            Axios.post("http://localhost:3001/api/insTest", {
+        Axios.post("http://localhost:3001/api/insTest", {
                 wbName: wbName
-            }).then(() => { })
-        }
-        else
-        {
-            console.log(cat);
-
-            if(cat===0)
-            alert("Unsafe");
-            else if(cat===1)
-            alert("Safe");
-            else
-            alert("Sent for testing");
-
-        }
-
+            }).then((response) => {
+                console.log(response);
+                alert(response.data+"       Already in To be tested list"); })
     }
-
-
-
     return (
 
         <>
 
-            <Modal
+            <Modal className="my-modal"
                 {...props}
                 size="lg"
                 aria-labelledby="contained-modal-title-vcenter"
@@ -63,7 +27,7 @@ function UserInput(props) {
             >
                 <Modal.Header closeButton>
                     <Modal.Title id="contained-modal-title-vcenter">
-                        INSERT INTO TABLES
+                        <h1>SEND FOR TESTING</h1>
                     </Modal.Title>
                 </Modal.Header>
                 <Modal.Body>

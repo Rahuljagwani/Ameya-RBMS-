@@ -55,7 +55,7 @@ app.post("/api/insTest", (req, res) => {
     const insTest = `Insert into tobetested values ("${WBName}");`;
     db.query(insTest, (err, result) => {
         if (err == null)
-        res.send("Success");
+        res.send("Successfully Sent to list of Water bodies to be tested");
     else
         res.send(err.sqlMessage);
         console.log(err);
@@ -72,7 +72,7 @@ app.post("/api/insRlist", (req, res) => {
     const insRlist = `Insert into riverlist values("${TWBName}",${WBCategory});`;
     db.query(insRlist, (err, result) => {
         if (err == null)
-        res.send("Success");
+        res.send("Successfull added to Safe Water Bodies");
     else
         res.send(err.sqlMessage);
         console.log(err);
