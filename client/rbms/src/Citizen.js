@@ -11,7 +11,7 @@ function Citizen() {
   const [UserInputShow, setUserInputShow] = useState(false);
   return (
     <>
-      <Button onClick={() => window.location.reload(false)}>Back to Main page</Button>
+      <Button className="buttonRak" onClick={() => window.location.reload(false)}>Back to Main page</Button>
       <div className="app">
         <div className="login-form">
 
